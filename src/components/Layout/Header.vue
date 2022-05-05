@@ -43,23 +43,20 @@ export default {
   right: 0px;
   background-color: #2e3b51;
 }
-/* logo */
 .logo {
   vertical-align: middle; /* 居中 */
   padding: 0px 10px 0px 10px; /* 上右下左 */
 }
-/* 文字 */
 .company {
   position: absolute;
   color: white;
   font-size: 25px;
 }
-/* 下拉菜单 */
 .el-dropdown{
   float: right; /* 浮动在右边 */
   margin-right: 15px;
 }
-/* 系统管理 */
+
 .el-dropdown-link{
   color: white;
   cursor: pointer; /* 鼠标放上去是手的形状 */

@@ -32,6 +32,26 @@
         <span slot="title">测试配置</span>
       </el-menu-item>
 
+      <el-menu-item index="/member/">
+        <i class="el-icon-s-help"></i>
+        <span slot="title">持续集成</span>
+      </el-menu-item>
+
+      <el-menu-item index="/member/">
+        <i class="el-icon-s-check"></i>
+        <span slot="title">精准测试</span>
+      </el-menu-item>
+
+      <el-menu-item index="/member/">
+        <i class="el-icon-coin"></i>
+        <span slot="title">数据工厂</span>
+      </el-menu-item>
+
+      <el-menu-item index="/member/">
+        <i class="el-icon-cpu"></i>
+        <span slot="title">实用工具</span>
+      </el-menu-item>
+
 
     </el-menu>
   </div>
