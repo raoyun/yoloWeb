@@ -12,12 +12,17 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {
-  const role = localStorage.getItem('yoloUser');
-  if (!role && to.path !== '/login') {
-    next('/login');
+  const role = localStorage.getItem('yoloUserName');
+  if (role) {
+    next()
   } else {
-      next();
+    if (to.path === '/login' || to.path === '/register'){
+      next()
+    }else {
+      next('/login')
     }
+  }
+
 });
 
 new Vue({

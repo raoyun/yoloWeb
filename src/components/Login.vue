@@ -51,10 +51,10 @@ export default {
         if (valid) {
           loginRequest(this.user).then(data => {
             if (data.data.msg === "登录成功") {
-              localStorage.setItem("yoloToken", data.data.token);
-              localStorage.setItem("yoloUser", data.data.user);
+              localStorage.setItem("yoloToken", data.data.data.token);
+              localStorage.setItem("yoloUserName", data.data.data.user.name);
               // 用户角色暂未设置
-              this.$router.push({path: "/personal"});
+              this.$router.push({path: "/"});
             } else {
               alert("您输入的用户名或密码错误！");
             }
@@ -70,7 +70,7 @@ export default {
 <style scoped>
 .login {
   width: 100%;
-  height: 740px;
+  height: 950px;
   background: url("../assets/img/login.png") no-repeat;
   background-size: cover;
   overflow: hidden;

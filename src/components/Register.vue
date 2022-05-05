@@ -68,7 +68,8 @@ export default {
         if (valid) {
           registerRequest(this.user).then(data =>{
             if (data.data.msg === "注册成功") {
-              this.$router.push({ path: "/" });
+              alert("注册成功！");
+              this.$router.push({ path: "/login" });
             } else {
               alert("注册失败！");
             }
@@ -83,7 +84,7 @@ export default {
 <style scoped>
 .login {
   width: 100%;
-  height: 740px;
+  height: 950px;
   background: url("../assets/img/login.png") no-repeat;
   background-size: cover;
   overflow: hidden;
