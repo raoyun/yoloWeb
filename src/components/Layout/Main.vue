@@ -14,8 +14,8 @@ export default {
 /* 主区域 */
 .main {
   position: absolute;
-  top: 50px;
-  left: 200px;
+  top: 55px;
+  left: 180px;
   bottom: 0px;
   right: 0px;  /* 距离右边0像素 */
   padding: 10px;

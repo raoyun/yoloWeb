@@ -5,6 +5,10 @@ import Register from '../components/Register'
 import Home from '../components/Layout/Home'
 import WorkSpace from '../components/page/WorkSpace'
 import Project from '../components/page/Project'
+import ApiCase from '../components/page/ApiCase'
+import TestPlan from "../components/page/TestPlan";
+import TestSetting from "../components/page/TestSetting";
+import Report from "../components/page/Report";
 
 Vue.use(Router)
 
@@ -29,6 +33,7 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      meta: { title: '自述文件' },
       children: [
         {
           path: '/workspace',
@@ -37,7 +42,28 @@ export default new Router({
         },
         {
           path: '/project',
-          component: Project
+          component: Project,
+          meta: {title: '项目管理'}
+        },
+        {
+          path: '/apiCase',
+          component: ApiCase,
+          meta: {title: '接口用例'}
+        },
+        {
+          path: '/testPlan',
+          component: TestPlan,
+          meta: {title: '测试计划'}
+        },
+        {
+          path: '/testSetting',
+          component: TestSetting,
+          meta: {title: '测试配置'}
+        },
+        {
+          path: '/report',
+          component: Report,
+          meta: {title: '测试报告'}
         },
       ]
     }

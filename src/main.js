@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
   const role = localStorage.getItem('yoloUserName');
   if (role) {
     next()

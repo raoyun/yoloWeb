@@ -1,6 +1,14 @@
 <template>
   <div class="navbar">
-    <el-menu :router='true' default-active="/workspace" class="el-menu-vertical-demo" background-color="#445d7a"
+    <div class="leftTop">
+      <a href="#/">
+        <img class="logo" src="../../assets/img/EOS.png" width="35px" />
+        <span class="company">yolo</span>
+      </a>
+    </div>
+
+
+    <el-menu :router='true' default-active="/workspace" class="el-menu-vertical-demo" background-color="#222d3b"
              text-color="#fff" active-text-color="#ffd04b">
 
       <el-menu-item index="/workspace">
@@ -13,21 +21,21 @@
         <span slot="title">项目管理</span>
       </el-menu-item>
 
-      <el-submenu index="/member/">
+      <el-submenu index="/apiCase">
         <template slot="title">
           <i class="el-icon-set-up"></i>
           <span>接口测试</span>
         </template>
-        <el-menu-item index="1-1">接口用例</el-menu-item>
-        <el-menu-item index="1-2">测试计划</el-menu-item>
+        <el-menu-item index="/apiCase">接口用例</el-menu-item>
+        <el-menu-item index="/testPlan">测试计划</el-menu-item>
       </el-submenu>
 
-      <el-menu-item index="/member/">
+      <el-menu-item index="/report">
         <i class="el-icon-document"></i>
         <span slot="title">测试报告</span>
       </el-menu-item>
 
-      <el-menu-item index="/member/">
+      <el-menu-item index="/testSetting">
         <i class="el-icon-s-operation"></i>
         <span slot="title">测试配置</span>
       </el-menu-item>
@@ -68,14 +76,27 @@ export default {
 .navbar {
   position: absolute;
   width: 180px;
-  top: 50px;  /* 距离上面50像素 */
+  top: 0px;  /* 距离上面50像素 */
   left: 0px;
   bottom: 0px;
   overflow-y: auto; /* 当内容过多时y轴出现滚动条 */
-  background-color: #445d7a;
+  background-color: #222d3b;
 }
 /* 去掉右边框 */
 .el-menu {
   border-right: none;
+}
+.logo {
+  vertical-align: middle; /* 居中 */
+  padding: 10px 10px 0px 15px; /* 上右下左 */
+}
+.company {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  padding: 10px 10px 0px 5px;
+}
+.leftTop{
+  height: 55px;
 }
 </style>
