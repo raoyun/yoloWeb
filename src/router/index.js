@@ -9,6 +9,7 @@ import ApiCase from '../components/page/ApiCase'
 import TestPlan from "../components/page/TestPlan";
 import TestSetting from "../components/page/TestSetting";
 import Report from "../components/page/Report";
+import Debug from "../components/page/Debug";
 
 Vue.use(Router)
 
@@ -64,6 +65,11 @@ export default new Router({
           path: '/report',
           component: Report,
           meta: {title: '测试报告'}
+        },
+        {
+          path: '/debug',
+          component: Debug,
+          meta: {title: '调试页面'}
         },
       ]
     }

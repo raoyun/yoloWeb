@@ -11,6 +11,11 @@
     <el-menu :router='true' default-active="/workspace" class="el-menu-vertical-demo" background-color="#222d3b"
              text-color="#fff" active-text-color="#ffd04b">
 
+      <el-menu-item index="/debug">
+        <i class="el-icon-suitcase"></i>
+        <span slot="title">调试页面</span>
+      </el-menu-item>
+
       <el-menu-item index="/workspace">
         <i class="el-icon-suitcase"></i>
         <span slot="title">工作台</span>
@@ -76,7 +81,7 @@ export default {
 .navbar {
   position: absolute;
   width: 180px;
-  top: 0px;  /* 距离上面50像素 */
+  top: 0px;
   left: 0px;
   bottom: 0px;
   overflow-y: auto; /* 当内容过多时y轴出现滚动条 */
